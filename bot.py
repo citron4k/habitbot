@@ -39,8 +39,6 @@ def main():
     app = (
     ApplicationBuilder()
     .token(BOT_TOKEN)
-    .proxy("http://127.0.0.1:55784")
-    .get_updates_proxy("http://127.0.0.1:55784")
     .post_init(post_init)
     .build()
     )
