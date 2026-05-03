@@ -12,7 +12,8 @@ logging.basicConfig(
     level=logging.INFO
 )
 
-BOT_TOKEN = "8276341233:AAH5yBYP6LPRWMWz7y4W452_iqXVYmOHCPM"
+import os
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 
 async def start(update, context):
@@ -38,8 +39,8 @@ def main():
     app = (
     ApplicationBuilder()
     .token(BOT_TOKEN)
-    .proxy("http://85.143.145.161")
-    .get_updates_proxy("http://85.143.145.161")
+    .proxy("http://127.0.0.1:55784")
+    .get_updates_proxy("http://127.0.0.1:55784")
     .post_init(post_init)
     .build()
     )
