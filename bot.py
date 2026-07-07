@@ -32,7 +32,7 @@ async def start(update, context):
 async def post_init(app):
     await init_db()
     setup_scheduler(app)
-    print("✅ HabitBot запущен!")
+    print("HabitBot запущен!")
 
 
 def main():
